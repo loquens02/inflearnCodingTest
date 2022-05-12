@@ -1,17 +1,17 @@
 # Project: AA
 # Makefile created by Dev-C++ 5.11
 
-CPP      = g++.exe -D__DEBUG__
-CC       = gcc.exe -D__DEBUG__
+CPP      = g++.exe
+CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main-extractNum.o
-LINKOBJ  = main-extractNum.o
-LIBS     = -L"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+OBJ      = main-restoreEnglish.o
+LINKOBJ  = main-restoreEnglish.o
+LIBS     = -L"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = AA.exe
-CXXFLAGS = $(CXXINCS) -g3 -std=c++0x
-CFLAGS   = $(INCS) -g3 -std=c++0x
+CXXFLAGS = $(CXXINCS) -std=c++0x
+CFLAGS   = $(INCS) -std=c++0x
 RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom
@@ -24,5 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-main-extractNum.o: main-extractNum.cpp
-	$(CPP) -c main-extractNum.cpp -o main-extractNum.o $(CXXFLAGS)
+main-restoreEnglish.o: main-restoreEnglish.cpp
+	$(CPP) -c main-restoreEnglish.cpp -o main-restoreEnglish.o $(CXXFLAGS)
