@@ -1,17 +1,17 @@
 # Project: AA
 # Makefile created by Dev-C++ 5.11
 
-CPP      = g++.exe
-CC       = gcc.exe
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = main-1toNM.o
-LINKOBJ  = main-1toNM.o
-LIBS     = -L"d:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"d:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
-INCS     = -I"d:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"d:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"d:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
-CXXINCS  = -I"d:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"d:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"d:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"d:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+OBJ      = main-oldCal.o
+LINKOBJ  = main-oldCal.o
+LIBS     = -L"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = AA.exe
-CXXFLAGS = $(CXXINCS) 
-CFLAGS   = $(INCS) 
+CXXFLAGS = $(CXXINCS) -g3 -std=c++0x
+CFLAGS   = $(INCS) -g3 -std=c++0x
 RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom
@@ -24,5 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-main-1toNM.o: main-1toNM.cpp
-	$(CPP) -c main-1toNM.cpp -o main-1toNM.o $(CXXFLAGS)
+main-oldCal.o: main-oldCal.cpp
+	$(CPP) -c main-oldCal.cpp -o main-oldCal.o $(CXXFLAGS)
